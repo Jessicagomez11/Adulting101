@@ -96,7 +96,13 @@ $(document).ready(function () {
             losses++
             $("#userLossesGoHere").text(losses);
             reset();
-
+        }
+        if (losses === 5){
+            alert(" You've gone over budget 5 times! Guess it's time to look for a second job...")
+        } else if (wins === 5){
+            alert("You've stayed on budget 5 times!  You are a budgeting kween!")
+        } else if (losses === 10){
+            alert("OH NO! You've gone over budget 10 times... we've got to work on those budgeting skillz!" )
         }
 
     })

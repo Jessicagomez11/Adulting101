@@ -9,8 +9,7 @@ h1{
 }
 p{
     letter-spacing: 3px;
-    margin-bottom: -10 rem;
-
+    
 }
 h3{
     font-family: 'Barrio', cursive;
@@ -32,4 +31,12 @@ h3{
 }
 img:hover{
     opacity: .8;
+}
+#bill{
+    font-size: 26px;
+    padding: 12px;
+}
+.stats{
+    margin-bottom: 5px;
+    padding-bottom: 0px;
 }
