@@ -1,80 +1,87 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Crystal Collector</title>
+    <title>Drink Collector</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Barrio|Kranky" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Barrio" rel="stylesheet">
 </head>
+
 <body>
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-4">Crystal Collector</h1>
-            
-            <p class="lead">Each of the crystals is worth a misterious value... Click on the crystals to add to your score.  Try and match the target without going over! </p>
+            <h1 class="display-4">Drink Collector</h1>
+
+            <p>It's Friday night and you're ready to celebrate the end of a really long work week. You've worked HARD
+                for the money, but now its time to TREAT YO' SELF (and maybe some friends, too) with some drinks at your
+                favorite bar. </p>
+
+            <p> Your goal is to spend all of the money you carefully budgeted without going over. The budget and drink
+                prices change every round. Spend it all of the money in your budget and win, #adulting! But if you go
+                over budget, you won't have enough money to cover this month's rent. Uh-Oh! </p>
         </div>
     </div>
 
 
     <div id="wrapper">
-            <div>
-                <div class="row">
-
-                    <div class="col-lg-3">
-                        <h2>Target: <h2> 
-                        <p id="targetNumberGoesHere"></p>
-                    </div>
-              
-                    <div class="col-lg-3">
-                        <h2>Points: <h2> 
-                        <p id="userScore"></p>
-                    </div>
-                       
-                    <div class="col-lg-3">
-                    <h2>Wins:  <h2> 
-                    <p id="userWinsGoHere">  </p>
-                    </div>
-
-                    <div class="col-lg-3">
-                    <h2>Losses: <h2> 
-                    <p id="userLossesGoHere">  </p>
-                    </div>  
-                </div> 
-            </div>  
-
+        <div>
 
             <div class="row">
-                <div class="col-lg-12">
-                <img class="images"  id="rose" src="http://4.bp.blogspot.com/-56x1OkkBVXs/U8SdhuwNoyI/AAAAAAAABxo/XZr-Cs-JQ4w/s1600/rose-quartz-lavra-da-ilha-brazil.jpg">
-                <img class="images" id="amethyst" src="https://www.feelcrystals.com.au/wp-content/uploads/2016/05/Amethyst-Specimen-4.jpg">
-                <img class="images" id="emerald" src="https://store.finemineralia.com/assets/images/DCO17-Emerald-12.jpg">
-                <img class="images" id="aqua" src="http://jewelrygemsabout.com/wp-content/uploads/2018/05/aquamarine-photo-1.jpg">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <img class="images" id="rose" src="assets/images/winter-sun-cocktail.jpg" alt="cocktail">
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <img class="images" id="amethyst" src="assets/images/Tequila_Img.png" alt="tequila shots">
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <img class="images" id="emerald" src="assets/images/OtisWinesFHF16.jpeg" alt="wine">
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <img class="images" id="aqua" src="assets/images/beer.jpeg" alt="beer">
                 </div>
             </div>
+        </div>
+        <div class="row">
 
+            <div class="col-lg-3 col-md-6 col-sm-12">
+
+                <h3>Budget: <h3>
+                        <p id="targetNumberGoesHere"></p>
+
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12">
+
+                <h3>You've Spent: <h3>
+                        <p id="userScore"> </p>
+
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12">
+
+                <h3>Wins: <h3>
+                        <p id="userWinsGoHere"> </p>
+
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12">
+
+                <h3>Losses: <h3>
+                        <p id="userLossesGoHere"> </p>
+
+            </div>
+        </div>
     </div>
-          
 
 
-
-
-
-
-
-
-
-
-    </div>
-
-
-
-    <script
-    src="http://code.jquery.com/jquery-3.3.1.js"
-    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-    crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
     <script src="assets/javascript/game.js"></script>
 </body>
+
 </html>
