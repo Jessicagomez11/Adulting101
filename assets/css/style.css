@@ -1,11 +1,27 @@
 h1{
     font-family: 'Barrio', cursive;
     color: rgb(35, 35, 61);
+    letter-spacing: 5px;
    
+}
+p{
+    letter-spacing: 3px;
+
+}
+h2{
+    font-family: 'Barrio', cursive;
+    background-color: rgb(35, 35, 61);
+    letter-spacing: 5px;
+    
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: justify;
 }
 
 .images{
-    height: 250px;
-    width: 300px;
+    height: 200px;
+    width: 250px;
+    margin-left: 22px;
 }
 

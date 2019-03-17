@@ -32,6 +32,16 @@ console.log(targetNumber);
 var targetNumberDisplayed = document.getElementById("targetNumberGoesHere")
 targetNumberDisplayed.textContent = targetNumber;
 
+winsDisplayed = document.getElementById("userWinsGoHere");
+winsDisplayed.textContent = wins;
+
+lossesDisplayed = document.getElementById("userLossesGoHere")
+lossesDisplayed.textContent = losses;
+
+pointsDisplayed = document.getElementById("userScore");
+pointsDisplayed.textContent = usersTotalScore;
+
+
 //runs the crytal values possibilities four times to generate four numbers
 //assign those numbers to the crytals
 
@@ -153,7 +163,7 @@ function reset(){//this function is going to reset the user's sccore, generate a
 
     aquamarine = crystalValuesPossibilities[Math.floor(Math.random() * crystalValuesPossibilities.length)]
     console.log("aquamarine " + aquamarine);
-    
+
     $("#rose").attr("value", roseQuartz);
     $("#amethyst").attr("value", amethyst);
     $("#emerald").attr("value", emerald);
