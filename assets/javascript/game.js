@@ -4,7 +4,7 @@ $(document).ready(function () {
 
     //declaring and initializing some variables
     var targetNumberPossibilities = [];
-    var crystalValuesPossibilities = [];
+    var drinkPricePossibilities = [];
     var targetNumber;
     var usersTotalScore = 0;
     var wins = 0;
@@ -18,7 +18,7 @@ $(document).ready(function () {
     //this generates all the numbers between 1-12
 
     for (var j = 1; j < 13; j++) {
-        crystalValuesPossibilities.push(j);
+        drinkPricePossibilities.push(j);
     }
 
 
@@ -45,10 +45,10 @@ $(document).ready(function () {
     //runs the crytal values possibilities four times to generate four numbers
     //assign those numbers to the crytals
 
-    var roseQuartz;
-    var amethyst;
-    var emerald;
-    var aquamarine;
+    var cocktail;
+    var tequila;
+    var wine;
+    var beer;
 
     //***** can i use this array to make a loop that generates random numbers for the 4 crystals
 
@@ -56,67 +56,27 @@ $(document).ready(function () {
     //this generates a random number for the values of the crystals
     // ******figure out to to loop this
 
-    var roseQuartz = crystalValuesPossibilities[Math.floor(Math.random() * crystalValuesPossibilities.length)]
-    console.log("rose quartz " + roseQuartz);
+    var cocktail = drinkPricePossibilities[Math.floor(Math.random() * drinkPricePossibilities.length)]
+    console.log("cocktail $" + cocktail);
 
-    var amethyst = crystalValuesPossibilities[Math.floor(Math.random() * crystalValuesPossibilities.length)]
-    console.log("amethyst " + amethyst);
+    var tequila = drinkPricePossibilities[Math.floor(Math.random() * drinkPricePossibilities.length)]
+    console.log("tequila $" + tequila);
 
-    var emerald = crystalValuesPossibilities[Math.floor(Math.random() * crystalValuesPossibilities.length)]
-    console.log("emerald " + emerald);
+    var wine = drinkPricePossibilities[Math.floor(Math.random() * drinkPricePossibilities.length)]
+    console.log("wine $" + wine);
 
-    var aquamarine = crystalValuesPossibilities[Math.floor(Math.random() * crystalValuesPossibilities.length)]
-    console.log("aquamarine " + aquamarine);
+    var beer = drinkPricePossibilities[Math.floor(Math.random() * drinkPricePossibilities.length)]
+    console.log("beer $" + beer);
 
     //assign the values with .attr() or it sets the values
-    $("#rose").attr("value", roseQuartz);
-    $("#amethyst").attr("value", amethyst);
-    $("#emerald").attr("value", emerald);
-    $("#aqua").attr("value", aquamarine);
+    $("#cocktail").attr("value", cocktail);
+    $("#tequila").attr("value", tequila);
+    $("#wine").attr("value", wine);
+    $("#beer").attr("value", beer);
 
-
-    //your score is computed by adding the number assigned to the crystals clicked
-
-    // $("#rose").on("click", function() {
-
-    //     usersTotalScore = usersTotalScore + roseQuartz;
-    //     console.log(usersTotalScore);
-
-    //     var usersScoreDisplayed = document.getElementById("userScore");
-    // usersScoreDisplayed.textContent = usersTotalScore;
-
-    // });
-    // $("#amethyst").on("click", function() {
-
-    //     //when amethyst is clicked add the value assigned to users total score    
-    //     usersTotalScore = usersTotalScore + amethyst;
-    //     console.log(usersTotalScore);
-
-    //     var usersScoreDisplayed = document.getElementById("userScore");
-    // usersScoreDisplayed.textContent = usersTotalScore;
-    // });
-    // $("#emerald").on("click", function() {
-
-    //     //when emerald is clicked add the value assigned to users total score    
-    //     usersTotalScore = usersTotalScore + emerald;
-    //     console.log(usersTotalScore);
-
-    //     var usersScoreDisplayed = document.getElementById("userScore");
-    // usersScoreDisplayed.textContent = usersTotalScore;
-    // });
-    // $("#aqua").on("click", function() {
-
-    //     //when aqua is clicked add the value assigned to users total score    
-    //     usersTotalScore = usersTotalScore + aquamarine;
-    //     console.log(usersTotalScore);
-
-    // var usersScoreDisplayed = document.getElementById("userScore");
-    // usersScoreDisplayed.textContent = usersTotalScore;
-
-    // });
 
     $(document.body).on("click", ".images", function () {
-        console.log("crystal value", $(this).attr("value"));
+        console.log("Drink Price $", $(this).attr("value"));
         usersTotalScore = usersTotalScore + parseInt($(this).attr("value"))
         console.log(usersTotalScore)
         document.getElementById("userScore").textContent = "$" + usersTotalScore;
@@ -152,40 +112,25 @@ $(document).ready(function () {
         $("#targetNumberGoesHere").text("$" + targetNumber);
 
         //resets the values of the crystals
-        roseQuartz = crystalValuesPossibilities[Math.floor(Math.random() * crystalValuesPossibilities.length)]
-        console.log("rose quartz " + roseQuartz);
+        cocktail = drinkPricePossibilities[Math.floor(Math.random() * drinkPricePossibilities.length)]
+        console.log("cocktail " + cocktail);
 
-        amethyst = crystalValuesPossibilities[Math.floor(Math.random() * crystalValuesPossibilities.length)]
-        console.log("amethyst " + amethyst);
+        tequila = drinkPricePossibilities[Math.floor(Math.random() * drinkPricePossibilities.length)]
+        console.log("tequila " + tequila);
 
-        emerald = crystalValuesPossibilities[Math.floor(Math.random() * crystalValuesPossibilities.length)]
-        console.log("emerald " + emerald);
+        wine = drinkPricePossibilities[Math.floor(Math.random() * drinkPricePossibilities.length)]
+        console.log("wine " + wine);
 
-        aquamarine = crystalValuesPossibilities[Math.floor(Math.random() * crystalValuesPossibilities.length)]
-        console.log("aquamarine " + aquamarine);
+        beer = drinkPricePossibilities[Math.floor(Math.random() * drinkPricePossibilities.length)]
+        console.log("beer " + beer);
 
-        $("#rose").attr("value", roseQuartz);
-        $("#amethyst").attr("value", amethyst);
-        $("#emerald").attr("value", emerald);
-        $("#aqua").attr("value", aquamarine);
+        $("#cocktail").attr("value", cocktail);
+        $("#tequila").attr("value", tequila);
+        $("#wine").attr("value", wine);
+        $("#beer").attr("value", beer);
 
 
     }
-
-
-
-
-
-
-    //if the user's number is geater than the randomly generated value then the user loses a point
-
-    // if (usersTotalScore === targetNumber) |
-    // function clear() {
-    //     usersTotalScore = "";
-    // }
-    // $("#userScore").on("click", Function() {
-    //     clear();
-    // });
 
 
 
