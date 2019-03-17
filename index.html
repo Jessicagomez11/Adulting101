@@ -7,46 +7,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Barrio|Kranky" rel="stylesheet">
 </head>
 <body>
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1 class="display-4">Crystal Collector</h1>
             
-            <p class="lead">Directions will go here.</p>
+            <p class="lead">Each of the crystals is worth a misterious value... Click on the crystals to add to your score.  Try and match the target without going over! </p>
         </div>
     </div>
-    <div  id="container">
-            <div class="d-flex justify-content-center"></div>
+
+
+    <div id="wrapper">
+            <div class="d-flex justify-content-center">
+                <div class="row">
+
+                    <div class="col-lg-3">
+                        <h2>Target: <h2> 
+                        <p id="targetNumberGoesHere"></p>
+                    </div>
+              
+                    <div class="col-lg-3">
+                        <h2>Your points:  <h2> 
+                        <p id="userScore"></p>
+                    </div>
+                       
+                    <div class="col-lg-3">
+                    <h2>Wins:  <h2> 
+                    <p id="userWinsGoHere">  </p>
+                    </div>
+
+                    <div class="col-lg-3">
+                    <h2>Losses: <h2> 
+                    <p id="userLossesGoHere">  </p>
+                    </div>  
+                </div> 
+            </div>  
+
+
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Target: <h2> 
-                    <p id="targetNumberGoesHere"></p>
-
-                </div>
-               
-            </div>    
-
-            <div class="row">
-                <div class="col-lg-12">
-                <button><img class="images"  id="rose" src="http://4.bp.blogspot.com/-56x1OkkBVXs/U8SdhuwNoyI/AAAAAAAABxo/XZr-Cs-JQ4w/s1600/rose-quartz-lavra-da-ilha-brazil.jpg"></button>
-                <button><img class="images" id="amethyst" src="https://www.feelcrystals.com.au/wp-content/uploads/2016/05/Amethyst-Specimen-4.jpg"></button>
-                <button><img class="images" id="emerald" src="https://store.finemineralia.com/assets/images/DCO17-Emerald-12.jpg"></button>
-                <button> <img class="images" id="aqua" src="http://jewelrygemsabout.com/wp-content/uploads/2018/05/aquamarine-photo-1.jpg"></button>
+                <img class="images"  id="rose" src="http://4.bp.blogspot.com/-56x1OkkBVXs/U8SdhuwNoyI/AAAAAAAABxo/XZr-Cs-JQ4w/s1600/rose-quartz-lavra-da-ilha-brazil.jpg">
+                <img class="images" id="amethyst" src="https://www.feelcrystals.com.au/wp-content/uploads/2016/05/Amethyst-Specimen-4.jpg">
+                <img class="images" id="emerald" src="https://store.finemineralia.com/assets/images/DCO17-Emerald-12.jpg">
+                <img class="images" id="aqua" src="http://jewelrygemsabout.com/wp-content/uploads/2018/05/aquamarine-photo-1.jpg">
                 </div>
             </div>
 
-
-            <div class="d-flex justify-content-center"></div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>Your Score:  <h2> 
-                    <p id="userScore"></p>
-
-                </div>
-               
-            </div>    
-
+    </div>
+          
 
 
 

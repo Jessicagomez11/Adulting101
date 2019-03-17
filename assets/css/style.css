@@ -1,7 +1,11 @@
+h1{
+    font-family: 'Barrio', cursive;
+    color: rgb(35, 35, 61);
+   
+}
+
 .images{
-    height: 200px;
-    width: 250px;
+    height: 250px;
+    width: 300px;
 }
-.row{
-    display:block;
-}
+

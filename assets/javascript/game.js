@@ -67,47 +67,106 @@ $("#aqua").attr("value", aquamarine);
 
 //your score is computed by adding the number assigned to the crystals clicked
 
-$("#rose").on("click", function() {
+// $("#rose").on("click", function() {
 
-    usersTotalScore = usersTotalScore + roseQuartz;
-    console.log(usersTotalScore);
+//     usersTotalScore = usersTotalScore + roseQuartz;
+//     console.log(usersTotalScore);
 
-    var usersScoreDisplayed = document.getElementById("userScore");
-usersScoreDisplayed.textContent = usersTotalScore;
+//     var usersScoreDisplayed = document.getElementById("userScore");
+// usersScoreDisplayed.textContent = usersTotalScore;
 
-});
-$("#amethyst").on("click", function() {
+// });
+// $("#amethyst").on("click", function() {
 
-    //when amethyst is clicked add the value assigned to users total score    
-    usersTotalScore = usersTotalScore + amethyst;
-    console.log(usersTotalScore);
+//     //when amethyst is clicked add the value assigned to users total score    
+//     usersTotalScore = usersTotalScore + amethyst;
+//     console.log(usersTotalScore);
 
-    var usersScoreDisplayed = document.getElementById("userScore");
-usersScoreDisplayed.textContent = usersTotalScore;
-});
-$("#emerald").on("click", function() {
+//     var usersScoreDisplayed = document.getElementById("userScore");
+// usersScoreDisplayed.textContent = usersTotalScore;
+// });
+// $("#emerald").on("click", function() {
 
-    //when emerald is clicked add the value assigned to users total score    
-    usersTotalScore = usersTotalScore + emerald;
-    console.log(usersTotalScore);
+//     //when emerald is clicked add the value assigned to users total score    
+//     usersTotalScore = usersTotalScore + emerald;
+//     console.log(usersTotalScore);
 
-    var usersScoreDisplayed = document.getElementById("userScore");
-usersScoreDisplayed.textContent = usersTotalScore;
-});
-$("#aqua").on("click", function() {
+//     var usersScoreDisplayed = document.getElementById("userScore");
+// usersScoreDisplayed.textContent = usersTotalScore;
+// });
+// $("#aqua").on("click", function() {
 
-    //when aqua is clicked add the value assigned to users total score    
-    usersTotalScore = usersTotalScore + aquamarine;
-    console.log(usersTotalScore);
+//     //when aqua is clicked add the value assigned to users total score    
+//     usersTotalScore = usersTotalScore + aquamarine;
+//     console.log(usersTotalScore);
 
+// var usersScoreDisplayed = document.getElementById("userScore");
+// usersScoreDisplayed.textContent = usersTotalScore;
+    
+// });
 
-
-var usersScoreDisplayed = document.getElementById("userScore");
-usersScoreDisplayed.textContent = usersTotalScore;
-});
-
+$(document.body).on("click", ".images", function(){
+    console.log("crystal value", $(this).attr("value"));
+    usersTotalScore = usersTotalScore + parseInt($(this).attr("value")) 
+    console.log(usersTotalScore)
+    document.getElementById("userScore").textContent = usersTotalScore;
 
 //if the user's total equals the randomly generated number then the user gets a point
+
+
+    if (usersTotalScore === targetNumber) {
+        alert("You Win!!!");
+        wins++
+        console.log(wins)
+        $("#userWinsGoHere").text(wins);
+//if the user goes over then they lose a point
+        reset();
+    }else if(usersTotalScore > targetNumber){
+        alert("Uh-Oh.  You went over!")
+       losses++
+        $("#userLossesGoHere").text(" " + losses);
+        reset();
+
+    }
+
+})
+
+function reset(){//this function is going to reset the user's sccore, generate a new target number and generate new values for the crystals
+    //this resets the users Total score
+    usersTotalScore = 0; 
+    $("#userScore").text(usersTotalScore);
+
+
+    //this sets a new random number in the target in the document
+    targetNumber =  targetNumberPossibilities[Math.floor(Math.random() * targetNumberPossibilities.length)]
+    $("#targetNumberGoesHere").text(targetNumber);
+    
+    //resets the values of the crystals
+     roseQuartz = crystalValuesPossibilities[Math.floor(Math.random() * crystalValuesPossibilities.length)]
+    console.log("rose quartz " + roseQuartz);
+
+    amethyst = crystalValuesPossibilities[Math.floor(Math.random() * crystalValuesPossibilities.length)]
+    console.log("amethyst " + amethyst);
+
+    emerald = crystalValuesPossibilities[Math.floor(Math.random() * crystalValuesPossibilities.length)]
+    console.log("emerald " + emerald);
+
+    aquamarine = crystalValuesPossibilities[Math.floor(Math.random() * crystalValuesPossibilities.length)]
+    console.log("aquamarine " + aquamarine);
+    
+    $("#rose").attr("value", roseQuartz);
+    $("#amethyst").attr("value", amethyst);
+    $("#emerald").attr("value", emerald);
+    $("#aqua").attr("value", aquamarine);
+
+
+}
+
+
+
+    
+
+
 //if the user's number is geater than the randomly generated value then the user loses a point
 
 // if (usersTotalScore === targetNumber) |
